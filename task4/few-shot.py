@@ -32,8 +32,6 @@ print(test_dataset)
 
 model = SetFitModel.from_pretrained("sentence-transformers/paraphrase-mpnet-base-v2")
 
-print(1)
-
 trainer = SetFitTrainer(
     model=model,
     train_dataset=train_dataset,
@@ -44,7 +42,6 @@ trainer = SetFitTrainer(
     num_epochs=4
 )
 
-# Train and evaluate!
 trainer.train()
 metrics = trainer.evaluate()
 
